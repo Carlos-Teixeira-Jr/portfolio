@@ -16,6 +16,9 @@ module.exports = {
       fontFamily: {
         'sans': ['Poppins', 'ui-sans-serif', 'system-ui'],
       },
+      fontFamily: {
+        'stylish': ['YesevaOne-Regular', 'ui-sans-serif'],
+      },
     },
   },
   plugins: [],

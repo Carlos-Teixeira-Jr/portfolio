@@ -8,4 +8,13 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
+  color: #CCCCCC;
+}
+
+.gradient-border {
+  width: 250px;
+  height: 250px;
+  border: 20px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, #667eea, #764ba2);
 }
