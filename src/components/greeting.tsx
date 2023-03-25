@@ -11,15 +11,18 @@ const Greetings: React.FC = () => {
         <p className="text-6xl font-extrabold leading-2">I&apos;m a fullstack <br/> javascript web developer</p>
         <p className="text-6xl font-extrabold leading-2">Nice to meet you!</p>
       </div>
-      <div className="h-[400px] w-[400px] gradient-border overflow-hidden my-auto">
-        <Image 
-          src={"/images/profile_pic.jpg"} 
-          alt={""}
-          width={400}
-          height={400}
-          className="relative top-[-40px]"
-        />
+      <div className="w-[450px] h-[450px] rounded-full bg-gradient-to-r from-[#13B0F5] to-[#E70FAA]">
+        <div className="h-[400px] w-[400px] rounded-full overflow-hidden mt-[25px] mx-auto">
+          <Image 
+            src={"/images/profile_pic.jpg"} 
+            alt={""}
+            width={400}
+            height={400}
+            className="relative top-[-80px]"
+          />
+        </div>
       </div>
+      
     </div>
   )
 }
