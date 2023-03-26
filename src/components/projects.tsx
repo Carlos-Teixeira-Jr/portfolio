@@ -19,14 +19,14 @@ const Projects: React.FC = () => {
               alt={""}
               width={375}
               height={260}
-              className="rounded-t-[30px]"
+              className="rounded-t-[30px] h-full"
             />
           </div>
           <div className="max-w-[375px] h-[307px] p-5 bg-[#363636] rounded-b-[30px]">
             <h2 className=" text-3xl font-semibold leading-6 mb-3 text-center">Coffee Connoisseur</h2>
             <p className="text-center mb-3 text-lg font-light leading-6">App de busca por cafeterias mais próximas do usuário por meio do consumo da API do Foursquare com integração à um banco de dados para avaliar, votar e favoritar as cafeterias.</p>
             <p className="text-center text-sm">Stack: Next.js, Javascript, CSS, React</p>
-            <div className="lg:mt-12 mt-12">
+            <div className="lg:mt-12 md:mt-12 mt-2">
               <div className="flex justify-center">
                 <div className="flex mx-2">
                   <a 
@@ -119,7 +119,7 @@ const Projects: React.FC = () => {
             <p className="text-center mb-3 text-lg font-light leading-6">Aplicação simples para exercitar as funcionalidades dos Hooks do React.</p>
             <p className="text-center text-sm">Stack: Javascript, CSS, React</p>
             <div className="mt-5 items-baseline">
-              <div className="flex justify-center lg:mt-[118px] mt-[120px]">
+              <div className="flex justify-center lg:mt-[118px] md:mt-[120px] mt-[100px]">
                 <div className="flex mx-2">
                   <a 
                     href="https://github.com/Carlos-Teixeira-Jr/robofriends" 

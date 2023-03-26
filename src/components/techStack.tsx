@@ -83,12 +83,12 @@ const TechStack: React.FC = () => {
           </div>
           <div className="w-[120px] h-[120px]">
             <MongoIcon
-              className={`mt-8 mx-auto flex ${isMobile ? 'w-8 mt-3' : ''}`}
+              className={`mx-auto flex ${isMobile ? 'w-8 mt-3' : 'mt-8'}`}
             />
           </div>
           <div className="w-[120px] h-[120px]">
             <NestIcon
-              className={`mt-8 mx-auto ${isMobile ? 'w-8 mt-4' : ''}`}
+              className={` mx-auto ${isMobile ? 'w-8 mt-4' : 'mt-8'}`}
             />
           </div>
           {!isMobile && (
@@ -101,7 +101,7 @@ const TechStack: React.FC = () => {
           
           <div className="md:w-[120px] md:h-[120px]">
             <GitlabIcon
-              className={`mt-8 mx-auto ${isMobile ? 'w-8 mt-2' : ''}`}
+              className={` mx-auto ${isMobile ? 'w-8 mt-2' : 'mt-8'}`}
             />
           </div>
           <div className="w-[120px] h-[120px]">
