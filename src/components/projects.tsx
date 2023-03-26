@@ -15,7 +15,7 @@ const Projects: React.FC = () => {
         <div className="mx-5 my-5 md:my-0 flex flex-col">
           <div className="h-[235px]">
             <Image 
-              src={"/images/coffee-connoisseur.png "} 
+              src={"/images/coffee-connoisseur.png"} 
               alt={""}
               width={375}
               height={260}
@@ -107,7 +107,7 @@ const Projects: React.FC = () => {
         <div className="mx-5 flex flex-col">
           <div className="h-[235px]">
             <Image 
-              src={"/images/robofriends.png "} 
+              src={"/images/robofriends.png"} 
               alt={""}
               width={375}
               height={260}
