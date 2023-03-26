@@ -3,7 +3,7 @@ import Image from "next/image"
 
 const Greetings: React.FC = () => {
   return (
-    <div className="flex justify-evenly lg:my-[150px] my-14">
+    <div className="flex justify-evenly lg:my-[90px] my-14">
       <div>
         <p className="lg:text-6xl md:text-4xl font-extrabold leading-2">Hi, 👋</p>
         <p className="lg:text-6xl md:text-4xl font-extrabold leading-2">My name is</p>

@@ -24,7 +24,7 @@ const Footer = () =>{
   function handleClickTechStack() {
     // Quando o usuário clicar no botão, role de volta para o topo da página
     window.scrollTo({
-      top: 600,
+      top: 650,
       behavior: "smooth",
     });
   }
@@ -32,7 +32,7 @@ const Footer = () =>{
   function handleClickProjects() {
     // Quando o usuário clicar no botão, role de volta para o topo da página
     window.scrollTo({
-      top: 1300,
+      top: 1250,
       behavior: "smooth",
     });
   }
@@ -47,21 +47,25 @@ const Footer = () =>{
 
   return (
     <div className="flex flex-col">
-      <div className="lg:flex justify-between my-10 lg:mx-[180px]">
-        <h1 className="mx-5 font-stylish text-4xl font-bold text-transparent bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] bg-clip-text flex justify-center">{"{Carlos | Teixeira}"}</h1>
+      <div className="lg:flex justify-center my-10 lg:mx-[180px]">
+        <h1 className="mx-5 whitespace-nowrap font-stylish text-4xl font-bold text-transparent bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] bg-clip-text flex justify-center">{"{Carlos | Teixeira}"}</h1>
         <div className="lg:flex my-auto">
-          <p className="text-[#CCCCCC] mx-6 flex justify-center text-lg my-5 lg:my-0">55 (53) 99166-4864</p>
+          <p className="text-[#CCCCCC] whitespace-nowrap mx-6 flex justify-center text-lg my-5 lg:my-0">55 (53) 99166-4864</p>
           <p className="text-[#CCCCCC] mx-6 flex justify-center text-lg my-5 lg:my-0">teixeirahist1988@gmail.com</p>
         </div>
         <div className="flex justify-center my-5 lg:my-0">
           <div className="text-[#CCCCCC] mx-5">
-            <GithubIcon/>
+            <a href="https://github.com/Carlos-Teixeira-Jr" target="_blank">
+              <GithubIcon/>
+            </a>
           </div>
           <div className="text-[#CCCCCC] mx-5">
             <TwitterIcon/>
           </div>
           <div className="text-[#CCCCCC] mx-5">
-            <LinkedinIcon/>
+            <a href="https://www.linkedin.com/in/carlos-teixeira-000b7b1a0/" target="_blank">
+              <LinkedinIcon/>
+            </a>
           </div>
         </div>
       </div>
@@ -75,7 +79,7 @@ const Footer = () =>{
           <button className="text-[#CCCCCC] mx-6 text-lg">Contact</button>
         </div>
         <div className="flex justify-center md:just">
-          <p className="flex">Built by <p className="text-transparent bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] bg-clip-text ml-1 text-xl font-semibold leading-6">Carlos Teixeira</p></p>
+          <p className="flex">Built by <a className="text-transparent bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] bg-clip-text ml-1 text-xl font-semibold leading-6">Carlos Teixeira</a></p>
         </div>
       </div>
     </div>

@@ -33,7 +33,7 @@ const Navbar = () => {
   function handleClickTechStack() {
     // Quando o usuário clicar no botão, role de volta para o topo da página
     window.scrollTo({
-      top: 600,
+      top: 650,
       behavior: "smooth",
     });
   }
@@ -41,7 +41,7 @@ const Navbar = () => {
   function handleClickProjects() {
     // Quando o usuário clicar no botão, role de volta para o topo da página
     window.scrollTo({
-      top: 1300,
+      top: 1250,
       behavior: "smooth",
     });
   }
@@ -55,7 +55,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className="lg:flex md:justify-between my-5 lg:my-10 lg:mx-[180px]">
+    <div className="lg:flex md:justify-between my-5 lg:my-5 lg:mx-[180px]">
       {!isMobile ? (
         <>
           <h1 className="mx-5 font-stylish text-4xl font-bold text-transparent bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] bg-clip-text">{"{Carlos | Teixeira}"}</h1>
@@ -67,13 +67,17 @@ const Navbar = () => {
           {!isTablet && (
             <div className="flex">
               <div className="text-[#CCCCCC] mx-5">
-                <GithubIcon />
+                <a href="https://github.com/Carlos-Teixeira-Jr" target="_blank">
+                  <GithubIcon />
+                </a>
               </div>
               <div className="text-[#CCCCCC] mx-5">
                 <TwitterIcon />
               </div>
               <div className="text-[#CCCCCC] mx-5">
-                <LinkedinIcon />
+                <a href="https://www.linkedin.com/in/carlos-teixeira-000b7b1a0/" target="_blank">
+                  <LinkedinIcon />
+                </a>
               </div>
             </div>
           )}

@@ -24,17 +24,17 @@ const TechStack: React.FC = () => {
       setIsMobile(window.innerWidth <= 640);
     }
 
-    handleResize(); // inicializa o estado com o tamanho da tela atual
-    window.addEventListener("resize", handleResize); // adiciona um listener para quando a tela for redimensionada
+    handleResize(); 
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener("resize", handleResize); // remove o listener quando o componente é desmontado
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   return (
     <div className="mt-20">
-      <h1 className="text-4xl font-bold leading-2 text-center my-5">My Tech Stack</h1>
+      <h1 className="text-4xl font-bold leading-2 text-center my- pt-20">My Tech Stack</h1>
       <p className="md:text-2xl text-xl font-normal leading-2 text-center m-5">Technologies I&apos;ve working with recently</p>
 
       <div className="flex flex-col">
