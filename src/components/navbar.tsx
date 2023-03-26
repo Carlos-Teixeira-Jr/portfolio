@@ -3,6 +3,7 @@ import GithubIcon from "./icons/githubIcon"
 import LinkedinIcon from "./icons/linkedInIcon"
 import TwitterIcon from "./icons/twitterIcon"
 import HamburguerMenuIcon from "./icons/hamburguerMenuIcon";
+import MessageIcon from "./icons/messageIcon";
 
 
 const Navbar = () => {
@@ -72,7 +73,9 @@ const Navbar = () => {
                 </a>
               </div>
               <div className="text-[#CCCCCC] mx-5">
-                <TwitterIcon />
+                <a href="mailto:teixeirahist1988@gmail.com" target="_blank">
+                  <MessageIcon/>
+                </a>
               </div>
               <div className="text-[#CCCCCC] mx-5">
                 <a href="https://www.linkedin.com/in/carlos-teixeira-000b7b1a0/" target="_blank">

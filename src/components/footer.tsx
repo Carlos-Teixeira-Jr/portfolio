@@ -1,5 +1,6 @@
 import GithubIcon from "./icons/githubIcon"
 import LinkedinIcon from "./icons/linkedInIcon"
+import MessageIcon from "./icons/messageIcon";
 import TwitterIcon from "./icons/twitterIcon"
 
 
@@ -60,7 +61,9 @@ const Footer = () =>{
             </a>
           </div>
           <div className="text-[#CCCCCC] mx-5">
-            <TwitterIcon/>
+            <a href="mailto:teixeirahist1988@gmail.com" target="_blank">
+              <MessageIcon/>
+            </a>
           </div>
           <div className="text-[#CCCCCC] mx-5">
             <a href="https://www.linkedin.com/in/carlos-teixeira-000b7b1a0/" target="_blank">
