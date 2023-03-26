@@ -96,12 +96,10 @@ const Navbar = () => {
             </div>
 
             {menuIsOpen && (
-              <div className="flex flex-col float-right bg-white bg-opacity-25 shadow-lg backdrop-filter rounded-lg border border-opacity-25 border-white">
-                <button className="text-[#CCCCCC] mx-6 text-2xl mb-5">Home</button>
-                <button className="text-[#CCCCCC] mx-6 text-2xl  mb-5">About</button>
-                <button className="text-[#CCCCCC] mx-6 text-2xl  mb-5">TechStack</button>
-                <button className="text-[#CCCCCC] mx-6 text-2xl  mb-5">Projects</button>
-                <button className="text-[#CCCCCC] mx-6 text-2xl  mb-5">Contact</button>
+              <div className="flex flex-col float-right bg-white bg-opacity-70 shadow-lg backdrop-filter rounded-l-lg border border-opacity-25 border-white absolute z-50 right-0">
+                <button className="text-[#191919] mx-6 text-2xl font-semibold  mb-5 mt-5" onClick={handleClickTechStack}>TechStack</button>
+                <button className="text-[#191919] mx-6 text-2xl font-semibold  mb-5" onClick={handleClickProjects}>Projects</button>
+                <button className="text-[#191919] mx-6 text-2xl font-semibold  mb-5" onClick={handleClickContacts}>Contact</button>
               </div>
             )}
           </div>
