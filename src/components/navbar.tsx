@@ -1,9 +1,9 @@
 import { MouseEvent, useEffect, useState } from "react";
 import GithubIcon from "./icons/githubIcon"
 import LinkedinIcon from "./icons/linkedInIcon"
-import TwitterIcon from "./icons/twitterIcon"
 import HamburguerMenuIcon from "./icons/hamburguerMenuIcon";
 import MessageIcon from "./icons/messageIcon";
+import { Link, animateScroll } from "react-scroll";
 
 
 const Navbar = () => {
@@ -31,39 +31,23 @@ const Navbar = () => {
     setMenusIsOpen(!menuIsOpen)
   }
 
-  function handleClickTechStack() {
-    // Quando o usuário clicar no botão, role de volta para o topo da página
-    window.scrollTo({
-      top: 650,
-      behavior: "smooth",
-    });
-  }
-
-  function handleClickProjects() {
-    // Quando o usuário clicar no botão, role de volta para o topo da página
-    window.scrollTo({
-      top: 1250,
-      behavior: "smooth",
-    });
-  }
-
-  function handleClickContacts() {
-    // Quando o usuário clicar no botão, role de volta para o topo da página
-    window.scrollTo({
-      top: 5000,
-      behavior: "smooth",
-    });
-  }
-
   return (
     <div className="lg:flex md:justify-between my-5 lg:my-5 lg:mx-[180px]">
       {!isMobile ? (
         <>
           <h1 className="mx-5 font-stylish text-4xl font-bold text-transparent bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] bg-clip-text">{"{Carlos | Teixeira}"}</h1>
           <div className="flex justify-evenly lg:w-2/6 sm:my-3 lg:my-0">
-            <button className="text-[#CCCCCC] mx-6 text-lg mb-5" onClick={handleClickTechStack}>TechStack</button>
-            <button className="text-[#CCCCCC] mx-6 text-lg mb-5" onClick={handleClickProjects}>Projects</button>
-            <button className="text-[#CCCCCC] mx-6 text-lg mb-5" onClick={handleClickContacts}>Contact</button>
+            <Link to="tech-stack" smooth={true} duration={500}>
+              <button className="text-[#CCCCCC] mx-6 text-lg mb-5" >TechStack</button>
+            </Link>
+            <Link to="projects" smooth={true} duration={500}>
+              <button className="text-[#CCCCCC] mx-6 text-lg mb-5" >Projects</button>
+            </Link>
+            <Link to="contact" smooth={true} duration={500}>
+              <button className="text-[#CCCCCC] mx-6 text-lg mb-5" >Contact</button>
+            </Link>
+            {/* <button className="text-[#CCCCCC] mx-6 text-lg mb-5" onClick={handleClickProjects}>Projects</button>
+            <button className="text-[#CCCCCC] mx-6 text-lg mb-5" onClick={handleClickContacts}>Contact</button> */}
           </div>
           {!isTablet && (
             <div className="flex">
@@ -100,9 +84,15 @@ const Navbar = () => {
 
             {menuIsOpen && (
               <div className="flex flex-col float-right bg-white bg-opacity-70 shadow-lg backdrop-filter rounded-l-lg border border-opacity-25 border-white absolute z-50 right-0">
-                <button className="text-[#191919] mx-6 text-2xl font-semibold  mb-5 mt-5" onClick={handleClickTechStack}>TechStack</button>
-                <button className="text-[#191919] mx-6 text-2xl font-semibold  mb-5" onClick={handleClickProjects}>Projects</button>
-                <button className="text-[#191919] mx-6 text-2xl font-semibold  mb-5" onClick={handleClickContacts}>Contact</button>
+                <Link to="tech-stack" smooth={true} duration={500}>
+                  <button className="text-[#191919] mx-6 text-2xl font-semibold  mb-5 mt-5">TechStack</button>
+                </Link>
+                <Link to="projects" smooth={true} duration={500}>
+                  <button className="text-[#191919] mx-6 text-2xl font-semibold  mb-5 mt-5">Projects</button>
+                </Link>
+                <Link to="contact" smooth={true} duration={500}>
+                  <button className="text-[#191919] mx-6 text-2xl font-semibold  mb-5 mt-5">Contact</button>
+                </Link>
               </div>
             )}
           </div>
