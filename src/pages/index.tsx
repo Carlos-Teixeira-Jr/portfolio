@@ -5,10 +5,18 @@ import Greetings from '@/components/greeting'
 import TechStack from '@/components/techStack'
 import Projects from '@/components/projects'
 import Footer from '@/components/footer'
+import { useState } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
+  const [language, setLanguage] = useState('')
+
+  const handleLanguageChange = (language: string) => {
+    setLanguage(language)
+  };
+
   return (
     <>
       <Head>
@@ -19,15 +27,25 @@ export default function Home() {
       </Head>
       <main className='max-w-[1536px] mx-auto'>
        
-        <Navbar/>
+        <Navbar 
+          selectedLanguage={handleLanguageChange}
+        />
 
-        <Greetings/>
+        <Greetings 
+          selectedLanguage={language}
+        />
 
-        <TechStack/>
+        <TechStack
+          selectedLanguage={language}
+        />
 
-        <Projects/>
+        <Projects
+          selectedLanguage={language}
+        />
 
-        <Footer/>
+        <Footer
+          selectedLanguage={language}
+        />
        
       </main>
     </>

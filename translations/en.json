@@ -1,10 +1,38 @@
 {
   "translation": {
-    "greetingHi": "Hi, 👋",
-    "myNameIs": "My name is",
-    "whatIDo1": "I&apos;m a fullstack ",
-    "whatIDo2": " javascript ",
-    "whatIDo3": " web developer.",
-    "NiceToMeetYou": "Nice to meet you!"
+    "greeting": {
+      "greetingHi": "Hi, 👋",
+      "myNameIs": "My name is",
+      "whatIDo1": "I'm a fullstack ",
+      "whatIDo2": " javascript ",
+      "whatIDo3": " web developer.",
+      "NiceToMeetYou": "Nice to meet you!"
+    },
+    "navbar": {
+      "techstack": "TechStack",
+      "projects": "Projects",
+      "contacts": "Contacts"
+    },
+    "techstack": {
+      "myTechStack": "My Tech Stack",
+      "resume": "Technologies I've been working with recently"
+    },
+    "projects": {
+      "title": "Projects",
+      "resume": "Some apps that I've built so far",
+      "coffeeConnoisseur": "Coffee store finder application that shows the coffee stores nearby using the Foursquare API with online database integration that allow users to evalluate, vote and favourite their favourite coffee shops.",
+      "viewCode": "View Code",
+      "livePreview": "Live Preview",
+      "netflixClone": "Simple application clonning some basic features of Netflix. The videos are fetched from YouTube API, includes a login system without password and is integrated with a online database that allow the user to favorite videos.",
+      "roboFriends": "Simple application to exercise the features of React Hooks.",
+      "quotesCarroussel": "Simple and basic application to exercise the primary functionalities of DOM manipulation using vanilla Javascript. This is my first personal project in web development.",
+      "airBnbClone": "A clone of first pages of AirBnb website consuming API services for geolocalization and interactive maps to exercise functionalities of Next.js and Tailwind stylesheet framework.",
+      "pokedex": "Simple application to exercise the use of APIs and basic functionalities of Vue.js and Bulma stylesheet framework."
+    },
+    "footer": {
+      "home": "Home",
+      "about": "About",
+      "builtBy": "Built by "
+    }
   }
 }

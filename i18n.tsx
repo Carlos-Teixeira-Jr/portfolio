@@ -3,20 +3,6 @@ import { initReactI18next } from 'react-i18next';
 import enTranslation from './translations/en.json'
 import ptTranslation from './translations/pt.json'
 
-// Defina as traduções para cada idioma que você deseja suportar
-// const resources = {
-//   en: {
-//     translation: {
-//       greetingHi: 'Hello',
-//     },
-//   },
-//   pt: {
-//     translation: {
-//       greetingHi: 'Olá',
-//     },
-//   },
-// };
-
 i18n.use(initReactI18next).init({
   resources: {
     en: {

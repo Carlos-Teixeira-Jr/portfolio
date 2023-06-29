@@ -14,11 +14,17 @@ import VsCodeIcon from "./icons/vsCodeIcon"
 import GitlabIcon from "./icons/gitlabIcon"
 import MySqlIcon from "./icons/mySqlIcon"
 import { Element } from "react-scroll"
+import { useTranslation } from "react-i18next"
 
+export interface ITechStack {
+  selectedLanguage: string,
+}
 
-const TechStack: React.FC = () => {
+const TechStack: React.FC<ITechStack> = ({selectedLanguage}) => {
 
   const [isMobile, setIsMobile] = useState(false);
+  const [language, setLanguage] = useState(selectedLanguage);
+  const { t } = useTranslation();
 
   useEffect(() => {
     function handleResize() {
@@ -36,8 +42,8 @@ const TechStack: React.FC = () => {
   return (
     <div className="mt-20">
       <Element name="tech-stack">
-        <h1 className="text-4xl font-bold leading-2 text-center my- pt-20">My Tech Stack</h1>
-        <p className="md:text-2xl text-xl font-normal leading-2 text-center m-5">Technologies I&apos;ve working with recently</p>
+        <h1 className="text-4xl font-bold leading-2 text-center my- pt-20">{t('translation.techstack.myTechStack')}</h1>
+        <p className="md:text-2xl text-xl font-normal leading-2 text-center m-5">{t("translation.techstack.resume")}</p>
 
         <div className="flex flex-col">
           <div className="flex justify-center">

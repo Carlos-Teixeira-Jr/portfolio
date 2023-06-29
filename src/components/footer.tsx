@@ -2,10 +2,18 @@ import { Element } from "react-scroll";
 import GithubIcon from "./icons/githubIcon"
 import LinkedinIcon from "./icons/linkedInIcon"
 import MessageIcon from "./icons/messageIcon";
-import { Link, animateScroll } from "react-scroll";
+import { Link} from "react-scroll";
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
+export interface IFooter {
+  selectedLanguage: string,
+}
 
-const Footer = () =>{
+const Footer: React.FC<IFooter> = ({selectedLanguage}) =>{
+
+  const [language, setLanguage] = useState(selectedLanguage);
+  const { t } = useTranslation();
 
   function handleClickHome() {
     // Quando o usuário clicar no botão, role de volta para o topo da página
@@ -46,23 +54,23 @@ const Footer = () =>{
         <div className="lg:flex lg:justify-evenly justify-around">
           <div className="md:flex justify-evenly lg:w-2/6 w-2/6 md:w-full mb-16 lg:ml-[180px]">
             <Link to="home" smooth={true} duration={500}>
-              <button className="text-[#CCCCCC] mx-6 text-lg" onClick={handleClickHome}>Home</button>
+              <button className="text-[#CCCCCC] mx-6 text-lg" onClick={handleClickHome}>{t("translation.footer.home")}</button>
             </Link>
             <Link to="about" smooth={true} duration={500}>
-              <button className="text-[#CCCCCC] mx-6 text-lg" onClick={handleClickHome}>About</button>
+              <button className="text-[#CCCCCC] mx-6 text-lg" onClick={handleClickHome}>{t("translation.footer.about")}</button>
             </Link>
             <Link to="tech-stack" smooth={true} duration={500}>
-              <button className="text-[#CCCCCC] mx-6 text-lg" onClick={handleClickHome}>TechStack</button>
+              <button className="text-[#CCCCCC] mx-6 text-lg" onClick={handleClickHome}>{t("translation.navbar.techstack")}</button>
             </Link>
             <Link to="projects" smooth={true} duration={500}>
-              <button className="text-[#CCCCCC] mx-6 text-lg" onClick={handleClickHome}>Projects</button>
+              <button className="text-[#CCCCCC] mx-6 text-lg" onClick={handleClickHome}>{t("translation.navbar.projects")}</button>
             </Link>
             <Link to="contact" smooth={true} duration={500}>
-              <button className="text-[#CCCCCC] mx-6 text-lg" onClick={handleClickHome}>Contact</button>
+              <button className="text-[#CCCCCC] mx-6 text-lg" onClick={handleClickHome}>{t("translation.navbar.contacts")}</button>
             </Link>
           </div>
           <div className="flex justify-center md:just">
-            <p className="flex">Built by <a className="text-transparent bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] bg-clip-text ml-1 text-xl font-semibold leading-6">Carlos Teixeira</a></p>
+            <p className="flex">{t("translation.footer.builtBy")}<a className="text-transparent bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] bg-clip-text ml-1 text-xl font-semibold leading-6">Carlos Teixeira</a></p>
           </div>
         </div>
       </Element>
