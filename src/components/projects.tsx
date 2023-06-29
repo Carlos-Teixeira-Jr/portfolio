@@ -258,12 +258,11 @@ const Projects: React.FC<IProjects> = ({selectedLanguage}) => {
               <p className="text-center mb-3 text-lg font-light leading-6">{t('translation.projects.airBnbClone')}</p>
               <p className="text-center text-sm">Stack: Javascript, Tailwind, Next.js, React</p>
               <div className="mt-5 items-baseline">
-                {/* <div className="flex justify-center lg:mt-[55px] md:mt-[50px] mt-[55px]"> */}
                 <div 
                   className={`flex justify-center ${
                     language === 'en' ?
                     'lg:mt-[55px] md:mt-[50px] mt-[55px]' :
-                    'lg:mt-[35px] md:mt-[50px] mt-[55px]'
+                    'lg:mt-[35px] md:mt-[50px] mt-[35px]'
                   }`}
                 >
                   <div className="flex mx-2">
@@ -315,7 +314,14 @@ const Projects: React.FC<IProjects> = ({selectedLanguage}) => {
               <p className="text-center mb-3 text-lg font-light leading-6">{t('translation.projects.pokedex')}</p>
               <p className="text-center text-sm">Stack: Javascript, Vue.js, Bulma</p>
               <div className="mt-5 items-baseline">
-                <div className="flex justify-center lg:mt-[102px] md:mt-[90px] mt-[75px]">
+                {/* <div className="flex justify-center lg:mt-[102px] md:mt-[90px] mt-[75px]"> */}
+                <div 
+                  className={`flex justify-center ${
+                    language === 'en' ?
+                    'lg:mt-[102px] md:mt-[90px] mt-[100px]' :
+                    'lg:mt-[102px] md:mt-[90px] mt-[75px]'
+                  }`}
+                >
                   <div className="flex mx-2">
                     <a 
                       href="https://github.com/Carlos-Teixeira-Jr/pokedex" 
