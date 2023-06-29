@@ -111,6 +111,35 @@ const Navbar = ({selectedLanguage}: INavbar) => {
           <div className="w-full">
             <div className="flex w-full justify-between">
               <h1 className="mx-5 font-stylish text-3xl font-bold text-transparent bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] bg-clip-text">{"{Carlos | Teixeira}"}</h1>
+              <div className="flex flex-col">
+                <div>
+                  <Image 
+                    src={"/images/languages/united-states.png"} 
+                    alt={""}
+                    width={30}
+                    height={30}
+                    className="cursor-pointer"
+                    onClick={() => {
+                      setLanguage('en');
+                      i18n.changeLanguage('en')
+                    }}
+                  />
+                </div>
+                <div>
+                  <Image 
+                    src={"/images/languages/brazil.png"} 
+                    alt={""}
+                    width={30}
+                    height={30}
+                    className="cursor-pointer"
+                    onClick={() => {
+                      setLanguage('ptbr');
+                      i18n.changeLanguage('ptbr')
+                    }}
+                  />
+                </div>
+                
+              </div>
               <div className="mx-5 my-[-5px]">
                 <button onClick={handleOpenMenu}>
                   <HamburguerMenuIcon />
