@@ -100,7 +100,7 @@ const Projects: React.FC<IProjects> = ({selectedLanguage}) => {
                 className={`${
                   language === 'en' ?
                   'mt-5 lg:mt-8' :
-                  'lg:mt-3'
+                  'lg:mt-3 mt-3'
                 }`}
               >
                 <div className="flex justify-center">
@@ -149,7 +149,7 @@ const Projects: React.FC<IProjects> = ({selectedLanguage}) => {
                   className={`flex justify-center ${
                     language === 'en' ?
                     'lg:mt-[118px] md:mt-[120px] mt-[120px]' :
-                    'lg:mt-[133px] md:mt-[120px] mt-[120px]'
+                    'lg:mt-[133px] md:mt-[120px] mt-[110px]'
                   }`}
                 >
                   <div className="flex mx-2">
@@ -206,7 +206,7 @@ const Projects: React.FC<IProjects> = ({selectedLanguage}) => {
                   className={`flex justify-center ${
                     language === 'en' ?
                     'lg:mt-[55px] md:mt-[55px] mt-[55px]' :
-                    'lg:mt-[px] md:mt-[55px] mt-[55px]'
+                    'lg:mt-[px] md:mt-[55px] mt-[40px]'
                   }`}
                 >
                   <div className="flex mx-2">
