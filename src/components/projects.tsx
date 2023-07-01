@@ -104,7 +104,7 @@ const Projects: React.FC<IProjects> = ({selectedLanguage}) => {
                 }`}
               >
                 <div className="flex justify-center">
-                  <Link href={""} className="my-auto">
+                  <Link href={"https://github.com/Carlos-Teixeira-Jr/netflix-clone"} target="_blank" className="my-auto">
                     <div className="flex mx-2">
                       <GithubIconBetter
                         width="25"
@@ -114,7 +114,7 @@ const Projects: React.FC<IProjects> = ({selectedLanguage}) => {
                     </div>
                   </Link>
 
-                  <Link href={""}>
+                  <Link href={"https://netflix-clone-nu-mocha.vercel.app/"} target="_blank">
                     <div className="flex mx-2">
                       <LinkIcon
                         width="35"
@@ -140,11 +140,11 @@ const Projects: React.FC<IProjects> = ({selectedLanguage}) => {
                 className="rounded-t-[30px] h-full"
               />
             </div>
-            <div className="max-w-[375px] h-[307px] p-5 bg-[#363636] rounded-b-[30px]">
+            <div className="max-w-[375px] h-fit p-5 bg-[#363636] rounded-b-[30px]">
               <h2 className=" text-3xl font-semibold leading-6 mb-3 text-center">Robofriends</h2>
               <p className="text-center mb-3 text-lg font-light leading-6">{t('translation.projects.roboFriends')}</p>
               <p className="text-center text-sm">Stack: Javascript, CSS, React</p>
-              <div className="mt-5 items-baseline">
+              <div className="mt-5">
                 <div 
                   className={`flex justify-center ${
                     language === 'en' ?
@@ -196,7 +196,7 @@ const Projects: React.FC<IProjects> = ({selectedLanguage}) => {
                 className="rounded-t-[30px] h-full"
               />
             </div>
-            <div className="max-w-[375px] h-[307px] p-5 bg-[#363636] rounded-b-[30px]">
+            <div className="max-w-[375px] h-fit p-5 bg-[#363636] rounded-b-[30px]">
               <h2 className=" text-3xl font-semibold leading-6 mb-3 text-center">Quotes Carroussel</h2>
               <p className="text-center mb-3 text-lg font-light leading-6">{t('translation.projects.quotesCarroussel')}</p>
               <p className="text-center text-sm">Stack: Javascript, bootstrap.</p>
@@ -253,7 +253,7 @@ const Projects: React.FC<IProjects> = ({selectedLanguage}) => {
                 className="rounded-t-[30px] h-full"
               />
             </div>
-            <div className="max-w-[375px] h-[307px] p-5 bg-[#363636] rounded-b-[30px]">
+            <div className="max-w-[375px] h-fit p-5 bg-[#363636] rounded-b-[30px]">
               <h2 className=" text-3xl font-semibold leading-6 mb-3 text-center">AirBnb Clone</h2>
               <p className="text-center mb-3 text-lg font-light leading-6">{t('translation.projects.airBnbClone')}</p>
               <p className="text-center text-sm">Stack: Javascript, Tailwind, Next.js, React</p>
@@ -262,7 +262,7 @@ const Projects: React.FC<IProjects> = ({selectedLanguage}) => {
                   className={`flex justify-center ${
                     language === 'en' ?
                     'lg:mt-[55px] md:mt-[50px] mt-[55px]' :
-                    'lg:mt-[35px] md:mt-[50px] mt-[35px]'
+                    'lg:mt-[35px] md:mt-[50px] mt-[5px]'
                   }`}
                 >
                   <div className="flex mx-2">
@@ -309,7 +309,7 @@ const Projects: React.FC<IProjects> = ({selectedLanguage}) => {
                 className="rounded-t-[30px] h-full"
               />
             </div>
-            <div className="max-w-[375px] h-[307px] p-5 bg-[#363636] rounded-b-[30px]">
+            <div className="max-w-[375px] h-fit p-5 bg-[#363636] rounded-b-[30px]">
               <h2 className=" text-3xl font-semibold leading-6 mb-3 text-center">Pokedéx</h2>
               <p className="text-center mb-3 text-lg font-light leading-6">{t('translation.projects.pokedex')}</p>
               <p className="text-center text-sm">Stack: Javascript, Vue.js, Bulma</p>
