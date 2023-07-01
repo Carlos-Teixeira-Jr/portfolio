@@ -211,7 +211,7 @@ const Projects: React.FC<IProjects> = ({selectedLanguage}) => {
                 >
                   <div className="flex mx-2">
                     <a 
-                      href="https://github.com/Carlos-Teixeira-Jr/carrossel-de-citacoes" 
+                      href="https://github.com/Carlos-Teixeira-Jr/next-quote-carousel" 
                       className="flex" 
                       target="_blank"
                     >
@@ -225,7 +225,7 @@ const Projects: React.FC<IProjects> = ({selectedLanguage}) => {
 
                   <div className="flex mx-2">
                     <a 
-                      href="https://carrossel-de-citacoes-ekji.vercel.app/" 
+                      href="https://next-quote-carousel.vercel.app/" 
                       className="flex my-auto" 
                       target="_blank"
                     >
