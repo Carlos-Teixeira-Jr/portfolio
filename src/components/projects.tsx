@@ -199,7 +199,7 @@ const Projects: React.FC<IProjects> = ({selectedLanguage}) => {
             <div className="max-w-[375px] h-fit p-5 bg-[#363636] rounded-b-[30px]">
               <h2 className=" text-3xl font-semibold leading-6 mb-3 text-center">Quotes Carroussel</h2>
               <p className="text-center mb-3 text-lg font-light leading-6">{t('translation.projects.quotesCarroussel')}</p>
-              <p className="text-center text-sm">Stack: Javascript, bootstrap.</p>
+              <p className="text-center text-sm">Stack: Javascript, Next.js, tailwind.</p>
               <div className="mt-5 items-baseline">
                 {/* <div className="flex justify-center lg:mt-[55px] md:mt-[55px] mt-[55px]"> */}
                 <div 
