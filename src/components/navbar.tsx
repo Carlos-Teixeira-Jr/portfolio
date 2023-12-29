@@ -7,6 +7,7 @@ import { Link } from "react-scroll";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import i18n from "../../i18n";
+import { useRouter } from "next/router";
 
 export interface INavbar {
   selectedLanguage: (language: string) => void;
@@ -19,6 +20,7 @@ const Navbar = ({selectedLanguage}: INavbar) => {
   const [menuIsOpen, setMenusIsOpen] = useState(false);
   const [language, setLanguage] = useState('ptbr');
   const { t } = useTranslation();
+  const router = useRouter();
 
   useEffect(() => {
     selectedLanguage(language)
@@ -44,7 +46,7 @@ const Navbar = ({selectedLanguage}: INavbar) => {
   }
 
   return (
-    <div className="lg:flex md:justify-between my-5 lg:my-5 lg:mx-[180px]">
+    <div className="lg:flex md:justify-between my-5 lg:my-5 lg:mx-10">
       {!isMobile ? (
         <>
           <h1 className="mx-5 font-stylish text-4xl font-bold text-transparent bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] bg-clip-text">{"{Carlos | Teixeira}"}</h1>
@@ -58,6 +60,12 @@ const Navbar = ({selectedLanguage}: INavbar) => {
             <Link to="contact" smooth={true} duration={500}>
               <button className="text-[#CCCCCC] mx-6 text-lg mb-5" >{t("translation.navbar.contacts")}</button>
             </Link>
+            <button 
+              className="text-[#CCCCCC] mx-6 text-lg mb-5"
+              onClick={() => router.push("/curriculum")}
+            >
+              {t("translation.navbar.curriculum")}
+            </button>
           </div>
           {!isTablet && (
             <>
@@ -104,7 +112,6 @@ const Navbar = ({selectedLanguage}: INavbar) => {
               </div>
             </>
           )}
-          
         </>
       ) : (
         <>
