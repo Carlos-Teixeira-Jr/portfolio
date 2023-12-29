@@ -40,7 +40,7 @@ const Projects: React.FC<IProjects> = ({selectedLanguage}) => {
 
         <div className="md:flex md:flex-wrap lg:flex-wrap justify-center gap-5">
           {cards.map((card) =>(
-            <div className="mx-5 my-5 md:my-0 flex flex-col">
+            <div className="mx-5 my-5 md:my-0 flex flex-col" key={card.key}>
               <div className="h-[235px]">
                 <Image 
                   src={card.src} 
