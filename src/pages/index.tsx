@@ -6,6 +6,7 @@ import TechStack from '@/components/techStack'
 import Projects from '@/components/projects'
 import Footer from '@/components/footer'
 import { useState } from 'react'
+import Curriculum from '@/components/curriculum'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -31,7 +32,7 @@ export default function Home() {
           selectedLanguage={handleLanguageChange}
         />
 
-        <Greetings 
+        {/* <Greetings 
           selectedLanguage={language}
         />
 
@@ -41,12 +42,13 @@ export default function Home() {
 
         <Projects
           selectedLanguage={language}
-        />
+        /> */}
+
+        <Curriculum/>
 
         <Footer
           selectedLanguage={language}
         />
-       
       </main>
     </>
   )

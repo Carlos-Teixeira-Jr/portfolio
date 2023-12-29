@@ -17,7 +17,20 @@ const Projects: React.FC<IProjects> = ({selectedLanguage}) => {
 
   useEffect(() => {
     setLanguage(selectedLanguage)
-  }, [selectedLanguage])
+  }, [selectedLanguage]);
+
+  const cards = [
+    {
+      key: 'fasteng',
+      src: '/images/fasteng.png',
+      title: 'Fasteng',
+      resume: t('tanslation.projects.fasteng'),
+      stack: 'React.js, Express, MongoDB',
+      githubLink: 'https://github.com/Fastengapp',
+      previewLink: 'https://smartdoser.fastengapp.com.br/entrar',
+      alt: "Preview project card"
+    }
+  ]
 
   return (
     <div className="md:my-40 my-14">
@@ -26,6 +39,64 @@ const Projects: React.FC<IProjects> = ({selectedLanguage}) => {
         <p className="text-2xl font-normal leading-2 text-center m-5 mb-10">{t('translation.projects.resume')}</p>
 
         <div className="md:flex md:flex-wrap lg:flex-wrap justify-center gap-5">
+          {cards.map((card) =>(
+            <div className="mx-5 my-5 md:my-0 flex flex-col">
+              <div className="h-[235px]">
+                <Image 
+                  src={card.src} 
+                  alt={card.alt}
+                  width={375}
+                  height={260}
+                  className="rounded-t-[30px] h-full"
+                />
+              </div>
+              <div className="max-w-[375px] lg:h-[307px] p-5 bg-[#363636] rounded-b-[30px]">
+                <h2 className=" text-3xl font-semibold leading-6 mb-3 text-center">{card.title}</h2>
+                <p className="text-center mb-3 text-lg font-light leading-6">{t('translation.projects.fasteng')}</p>
+                <p className="text-center text-sm">Stack: {card.stack}</p>
+                <div 
+                  className={`${
+                    language === 'en' ?
+                    'lg:mt-6 md:mt-12 mt-2' :
+                    'lg:mt-3.5'
+                  }`}
+                >
+                  <div className="flex justify-center">
+                    <div className="flex mx-2">
+                      <a 
+                        href={card.githubLink}
+                        className="flex" 
+                        target="_blank"
+                      >
+                        <GithubIconBetter
+                          width="25"
+                          height="25"
+                        />
+                        <p className="text-center text-sm mx-2 my-auto hover:underline">{t('translation.projects.viewCode')}</p>
+                      </a>
+                    </div>
+
+                    <div className="flex mx-2">
+                      <a 
+                        href={card.previewLink}
+                        className="flex my-auto" 
+                        target="_blank"
+                      >
+                        <LinkIcon
+                          width="35"
+                          height="35"
+                          viewBox="0 130 960 960"
+                          className="my-auto"
+                        />
+                        <p className="text-center text-sm mx-2 my-auto hover:underline">{t('translation.projects.livePreview')}</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+
           <div className="mx-5 my-5 md:my-0 flex flex-col">
             <div className="h-[235px]">
               <Image 
