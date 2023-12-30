@@ -5,14 +5,20 @@ import Greetings from '@/components/greeting'
 import TechStack from '@/components/techStack'
 import Projects from '@/components/projects'
 import Footer from '@/components/footer'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Curriculum from '@/components/curriculum'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
 
-  const [language, setLanguage] = useState('')
+  const [language, setLanguage] = useState('');
+  const [isCurriculum, setIsCurriculum] = useState(false);
+
+  useEffect(() => {
+    console.log("🚀 ~ file: index.tsx:25 ~ Home ~ isCurriculum:", isCurriculum)
+  }, [isCurriculum])
+  
 
   const handleLanguageChange = (language: string) => {
     setLanguage(language)
@@ -27,24 +33,30 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className='max-w-[1536px] mx-auto'>
-       
         <Navbar 
           selectedLanguage={handleLanguageChange}
+          handleShowCurriculum={(show: boolean) => setIsCurriculum(show)}
         />
+        {isCurriculum ? (
+          <main className='max-w-[1536px] mx-auto'>
+            <Curriculum/>
+          </main>
+        ): (
+          <main className='max-w-[1536px] mx-auto'>
 
-        {/* <Greetings 
-          selectedLanguage={language}
-        />
+            <Greetings 
+              selectedLanguage={language}
+            />
 
-        <TechStack
-          selectedLanguage={language}
-        />
+            <TechStack
+              selectedLanguage={language}
+            />
 
-        <Projects
-          selectedLanguage={language}
-        /> */}
-
-        <Curriculum/>
+            <Projects
+              selectedLanguage={language}
+            />
+          </main>
+        )}
 
         <Footer
           selectedLanguage={language}
