@@ -25,10 +25,6 @@ const Navbar = ({selectedLanguage, handleShowCurriculum}: INavbar) => {
   const [showCurriculum, setShowCurriculum] = useState(false);
 
   useEffect(() => {
-    console.log("🚀 ~ file: navbar.tsx:34 ~ Navbar ~ showCurriculum:", showCurriculum)
-  }, [showCurriculum])
-
-  useEffect(() => {
     selectedLanguage(language)
   }, [language]);
 
