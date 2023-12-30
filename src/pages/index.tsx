@@ -15,11 +15,6 @@ export default function Home() {
   const [language, setLanguage] = useState('');
   const [isCurriculum, setIsCurriculum] = useState(false);
 
-  useEffect(() => {
-    console.log("🚀 ~ file: index.tsx:25 ~ Home ~ isCurriculum:", isCurriculum)
-  }, [isCurriculum])
-  
-
   const handleLanguageChange = (language: string) => {
     setLanguage(language)
   };
