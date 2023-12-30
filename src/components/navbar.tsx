@@ -11,9 +11,10 @@ import { useRouter } from "next/router";
 
 export interface INavbar {
   selectedLanguage: (language: string) => void;
+  handleShowCurriculum: (show: boolean) => void;
 }
 
-const Navbar = ({selectedLanguage}: INavbar) => {
+const Navbar = ({selectedLanguage, handleShowCurriculum}: INavbar) => {
 
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
@@ -21,10 +22,20 @@ const Navbar = ({selectedLanguage}: INavbar) => {
   const [language, setLanguage] = useState('ptbr');
   const { t } = useTranslation();
   const router = useRouter();
+  const [showCurriculum, setShowCurriculum] = useState(false);
+
+  useEffect(() => {
+    console.log("🚀 ~ file: navbar.tsx:34 ~ Navbar ~ showCurriculum:", showCurriculum)
+  }, [showCurriculum])
 
   useEffect(() => {
     selectedLanguage(language)
   }, [language]);
+
+  useEffect(() => {
+    handleShowCurriculum(showCurriculum)
+  }, [showCurriculum])
+  
   
   useEffect(() => {
     function handleResize() {
@@ -62,7 +73,7 @@ const Navbar = ({selectedLanguage}: INavbar) => {
             </Link>
             <button 
               className="text-[#CCCCCC] mx-6 text-lg mb-5"
-              onClick={() => router.push("/curriculum")}
+              onClick={() => setShowCurriculum(!showCurriculum)}
             >
               {t("translation.navbar.curriculum")}
             </button>
@@ -117,8 +128,8 @@ const Navbar = ({selectedLanguage}: INavbar) => {
         <>
           <div className="w-full">
             <div className="flex w-full justify-between">
-              <h1 className="mx-5 font-stylish text-3xl font-bold text-transparent bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] bg-clip-text">{"{Carlos | Teixeira}"}</h1>
-              <div className="flex flex-col">
+              <h1 className="mx-5 font-stylish text-xl md:text-3xl font-bold text-transparent bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] bg-clip-text">{"{Carlos | Teixeira}"}</h1>
+              <div className="flex gap-2">
                 <div>
                   <Image 
                     src={"/images/languages/united-states.png"} 
@@ -165,6 +176,15 @@ const Navbar = ({selectedLanguage}: INavbar) => {
                 <Link to="contact" smooth={true} duration={500}>
                   <button className="text-[#191919] mx-6 text-2xl font-semibold  mb-5 mt-5">{t("translation.navbar.contacts")}</button>
                 </Link>
+                <button 
+                  onClick={() => {
+                    setShowCurriculum(!showCurriculum);
+                    setMenusIsOpen(false);
+                  }} 
+                  className="text-[#191919] mx-6 text-2xl font-semibold  mb-5 mt-5"
+                >
+                  {showCurriculum ? t("translation.navbar.home") : t("translation.navbar.curriculum")}
+                </button>
               </div>
             )}
           </div>
