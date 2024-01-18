@@ -7,7 +7,6 @@ import { Link } from "react-scroll";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import i18n from "../../i18n";
-import { useRouter } from "next/router";
 
 export interface INavbar {
   selectedLanguage: (language: string) => void;
@@ -21,7 +20,6 @@ const Navbar = ({selectedLanguage, handleShowCurriculum}: INavbar) => {
   const [menuIsOpen, setMenusIsOpen] = useState(false);
   const [language, setLanguage] = useState('ptbr');
   const { t } = useTranslation();
-  const router = useRouter();
   const [showCurriculum, setShowCurriculum] = useState(false);
 
   useEffect(() => {
@@ -172,6 +170,11 @@ const Navbar = ({selectedLanguage, handleShowCurriculum}: INavbar) => {
                 <Link to="contact" smooth={true} duration={500}>
                   <button className="text-[#191919] mx-6 text-2xl font-semibold  mb-5 mt-5">{t("translation.navbar.contacts")}</button>
                 </Link>
+                {/* {isMobile && menuIsOpen && (
+                  <Link to="curriculum" smooth={true} duration={500}>
+                    <button className="text-[#191919] mx-6 text-2xl font-semibold  mb-5 mt-5">{t("translation.navbar.curriculum")}</button>
+                  </Link>
+                )} */}
                 <button 
                   onClick={() => {
                     setShowCurriculum(!showCurriculum);

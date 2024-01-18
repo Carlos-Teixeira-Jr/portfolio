@@ -22,41 +22,41 @@ const Curriculum = () => {
       date: `Mai 2023 - ${t("translation.resume.current")}`,
       description: t("translation.resume.jbr")
     },
-    {
-      key: 'painter',
-      title: t("translation.resume.painter"),
-      company: 'Autônomo',
-      date: 'Mar 2022 - Nov 2022',
-      description: t("translation.resume.painter-desc")
-    },
-    {
-      key: 'janitor',
-      title: t("translation.resume.janitor"),
-      company: 'Morada do Parque',
-      date: 'Mar 2021 - Fev 2022',
-      description: t("translation.resume.janitor-desc")
-    },
-    {
-      key: 'multiserv',
-      title: t("translation.resume.general-services"),
-      company: 'Multiserv',
-      date: 'Fev 2020 - Mar 2021',
-      description: t("translation.resume.general-services-desc")
-    },
-    {
-      key: 'sales',
-      title: t("translation.resume.seller"),
-      company: 'SÉCULO 21 ELETRÔNICOS',
-      date: 'Mai 2018 - Dez 2020',
-      description: t("translation.resume.seller-desc")
-    },
+    // {
+    //   key: 'painter',
+    //   title: t("translation.resume.painter"),
+    //   company: 'Autônomo',
+    //   date: 'Mar 2022 - Nov 2022',
+    //   description: t("translation.resume.painter-desc")
+    // },
+    // {
+    //   key: 'janitor',
+    //   title: t("translation.resume.janitor"),
+    //   company: 'Morada do Parque',
+    //   date: 'Mar 2021 - Fev 2022',
+    //   description: t("translation.resume.janitor-desc")
+    // },
+    // {
+    //   key: 'multiserv',
+    //   title: t("translation.resume.general-services"),
+    //   company: 'Multiserv',
+    //   date: 'Fev 2020 - Mar 2021',
+    //   description: t("translation.resume.general-services-desc")
+    // },
+    // {
+    //   key: 'sales',
+    //   title: t("translation.resume.seller"),
+    //   company: 'SÉCULO 21 ELETRÔNICOS',
+    //   date: 'Mai 2018 - Dez 2020',
+    //   description: t("translation.resume.seller-desc")
+    // },
   ];
 
   return (
     <div className="flex flex-col md:flex-row px-2 md:px-10 justify-between"> 
       <div className="md:w-1/2 h-fit pb-5 rounded-t-full rounded-b-full bg-gradient-to-r from-[#13B0F5] to-[#E70FAA]">
         <div className="flex flex-col w-[90%] rounded-full overflow-hidden bg-black mt-5 mx-auto my-auto p-10 md:p-12">
-          <div className="my-10">
+          <div className="my-10 mx-auto">
             <hr/>
             <h1 className="text-3xl flex">
               Carlos
@@ -95,7 +95,7 @@ const Curriculum = () => {
         </div>
       </div>
       <div className="w-full px-2 md:px-20">
-        <h1 className="text-5xl font-extrabold bg-gradient-to-r text-transparent from-[#13B0F5] to-[#E70FAA] bg-clip-text text-center md:text-left">CARLOS TEIXEIRA</h1>
+        <h1 className="text-5xl font-extrabold bg-gradient-to-r text-transparent from-[#13B0F5] to-[#E70FAA] bg-clip-text text-center md:text-left my-10">CARLOS TEIXEIRA</h1>
         <h2 className="text-center md:text-left">{t("translation.resume.title")}</h2>
         <hr/>
         <h3 className="my-5 text-2xl text-center md:text-left">{t("translation.resume.experience")}</h3>
