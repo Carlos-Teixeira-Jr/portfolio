@@ -23,6 +23,7 @@
       "title": "Projetos",
       "resume": "Algumas aplicações que desenvolvi até o momento",
       "coffeeConnoisseur": "Aplicação de busca de cafeterias que exibe as cafeterias mais próximas consumindo a API do Foursquare com integração a um banco de dados que permite a persistência de dados de avaliação e listagem de cafeterias favoritas.",
+      "locale": "Portal de anúncios de imóveis com blog integrado hospedado em uma máquina virtal em nuvem com armazenamento de imagens em nuvem com serviços da R2, backend e frontend integrados e banco de dados não-relacional",
       "viewCode": "Ver Código",
       "livePreview": "Visualizar",
       "netflixClone": "Aplicação simples de clonagem de algumas funcionalidades básicas do Netflix. Os videos são requisitados à API do Youtube. Inclui um sistema de login sem senha e integração com um banco de dados em nuvem que permite aos usuários favoritar vídeos.",

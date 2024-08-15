@@ -118,7 +118,7 @@ const Projects: React.FC<IProjects> = ({ selectedLanguage }) => {
                 Locale Imóveis
               </h2>
               <p className="text-center mb-3 text-lg font-light leading-6">
-                {t("translation.projects.coffeeConnoisseur")}
+                {t("translation.projects.locale")}
               </p>
               <p className="text-center text-sm">
                 Stack: Next.js, Nestjs, Typescript, Tailwind CSS, MongoDB
