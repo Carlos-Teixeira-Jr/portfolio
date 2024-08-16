@@ -23,10 +23,91 @@ const Projects: React.FC<IProjects> = ({ selectedLanguage }) => {
       key: "fasteng",
       src: "/images/fasteng.png",
       title: "Fasteng",
-      resume: t("tanslation.projects.fasteng"),
-      stack: "React.js, Express, MongoDB",
+      resume: t("translation.projects.fasteng"),
+      stack: "Next.js, Nestjs, MongoDB, MaterialUI",
       githubLink: "https://github.com/Fastengapp",
       previewLink: "https://smartdoser.fastengapp.com.br/entrar",
+      alt: "Preview project card",
+    },
+    {
+      key: "locale",
+      src: "/images/locale.png",
+      title: "Locale Imóveis",
+      resume: t("translation.projects.locale"),
+      stack: "Next.js, Nestjs, MongoDB, Tailwind CSS",
+      githubLink: "https://github.com/Carlos-Teixeira-Jr/locale-backend-cln",
+      previewLink: "https://www.localeimoveis.com",
+      alt: "Preview project card",
+    },
+    {
+      key: "UnderAppz",
+      src: "/images/underappz.png",
+      title: "UnderAppz",
+      resume: t("translation.projects.underappz"),
+      stack: "Next.js, Nestjs, MongoDB, Tailwind CSS",
+      githubLink: "https://github.com/Carlos-Teixeira-Jr/underappz-backend",
+      previewLink: "https://underappz.vercel.app/",
+      alt: "Preview project card",
+    },
+    {
+      key: "Coffee Connoisseur",
+      src: "/images/coffee-connoisseur.png",
+      title: "Coffee Connoisseur",
+      resume: t("translation.projects.coffeeConnoisseur"),
+      stack: "Next.js, Javascript, CSS, React",
+      githubLink:
+        "https://github.com/Carlos-Teixeira-Jr/discover-coffee-stores2",
+      previewLink: "https://discover-coffee-stores2.vercel.app/",
+      alt: "Preview project card",
+    },
+    {
+      key: "Netflix Clone",
+      src: "/images/netflix-clone.png",
+      title: "Netflix Clone",
+      resume: t("translation.projects.netflixClone"),
+      stack: "Next.js, Javascript, CSS, React",
+      githubLink: "https://github.com/Carlos-Teixeira-Jr/netflix-clone",
+      previewLink: "https://netflix-clone-nu-mocha.vercel.app/",
+      alt: "Preview project card",
+    },
+    {
+      key: "AirBnb Clone",
+      src: "/images/airbns.png",
+      title: "AirBnb Clone",
+      resume: t("translation.projects.airBnbClone"),
+      stack: "Javascript, Tailwind, Next.js, React",
+      githubLink: "https://github.com/Carlos-Teixeira-Jr/airbnb-style-clone",
+      previewLink: "https://airbnb-style-clone.vercel.app/",
+      alt: "Preview project card",
+    },
+    {
+      key: "Quotes Carroussel",
+      src: "/images/quotes-carroussel.png",
+      title: "Quotes Carroussel",
+      resume: t("translation.projects.quotesCarroussel"),
+      stack: "Javascript, Next.js, tailwind CSS",
+      githubLink: "https://github.com/Carlos-Teixeira-Jr/next-quote-carousel",
+      previewLink: "https://next-quote-carousel.vercel.app/",
+      alt: "Preview project card",
+    },
+    {
+      key: "Pokedéx",
+      src: "/images/pokedex.png",
+      title: "Pokedéx",
+      resume: t("translation.projects.pokedex"),
+      stack: "Javascript, Vue.js, Bulma",
+      githubLink: "https://github.com/Carlos-Teixeira-Jr/pokedex",
+      previewLink: "https://pokedex-eight-lemon.vercel.app/",
+      alt: "Preview project card",
+    },
+    {
+      key: "Robofriends",
+      src: "/images/robofriends.png",
+      title: "Robofriends",
+      resume: t("translation.projects.roboFriends"),
+      stack: "Javascript, CSS, React",
+      githubLink: "https://github.com/Carlos-Teixeira-Jr/robofriends",
+      previewLink: "https://carlos-teixeira-jr.github.io/robofriends/",
       alt: "Preview project card",
     },
   ];
@@ -44,500 +125,69 @@ const Projects: React.FC<IProjects> = ({ selectedLanguage }) => {
         <div className="md:flex md:flex-wrap lg:flex-wrap justify-center gap-5">
           {cards.map((card) => (
             <div className="mx-5 my-5 md:my-0 flex flex-col" key={card.key}>
-              <div className="h-[235px]">
+              <div className="h-fit">
                 <Image
                   src={card.src}
                   alt={card.alt}
                   width={375}
-                  height={260}
-                  className="rounded-t-[30px] h-full"
+                  height={200}
+                  className="rounded-t-[30px] h-fit w-fit object-cover"
                 />
               </div>
-              <div className="max-w-[375px] lg:h-[307px] p-5 bg-[#363636] rounded-b-[30px]">
-                <h2 className=" text-3xl font-semibold leading-6 mb-3 text-center">
-                  {card.title}
-                </h2>
-                <p className="text-center mb-3 text-lg font-light leading-6">
-                  {t("translation.projects.fasteng")}
-                </p>
-                <p className="text-center text-sm">Stack: {card.stack}</p>
-                <div
-                  className={`${
-                    language === "en" ? "lg:mt-6 md:mt-12 mt-2" : "lg:mt-3.5"
-                  }`}
-                >
-                  <div className="flex justify-center">
-                    <div className="flex mx-2">
-                      <a
-                        href={card.githubLink}
-                        className="flex"
-                        target="_blank"
-                      >
-                        <GithubIconBetter width="25" height="25" />
-                        <p className="text-center text-sm mx-2 my-auto hover:underline">
-                          {t("translation.projects.viewCode")}
-                        </p>
-                      </a>
-                    </div>
+              <div className="lg:w-[385px] lg:h-full flex flex-col justify-between p-5 bg-[#363636] rounded-b-[30px]">
+                <div>
+                  <h2 className=" text-3xl font-semibold leading-6 mb-3 text-center">
+                    {card.title}
+                  </h2>
+                  <p className="text-center mb-3 text-md font-light leading-6">
+                    {card.resume}
+                  </p>
+                </div>
 
-                    <div className="flex mx-2">
-                      <a
-                        href={card.previewLink}
-                        className="flex my-auto"
-                        target="_blank"
-                      >
-                        <LinkIcon
-                          width="35"
-                          height="35"
-                          viewBox="0 130 960 960"
-                          className="my-auto"
-                        />
-                        <p className="text-center text-sm mx-2 my-auto hover:underline">
-                          {t("translation.projects.livePreview")}
-                        </p>
-                      </a>
+                <div>
+                  <p className="text-center text-sm">Stack: {card.stack}</p>
+                  <div
+                    className={`${
+                      language === "en" ? "lg:mt-6 md:mt-12 mt-2" : "lg:mt-3.5"
+                    }`}
+                  >
+                    <div className="flex justify-center">
+                      <div className="flex mx-2">
+                        <a
+                          href={card.githubLink}
+                          className="flex"
+                          target="_blank"
+                        >
+                          <GithubIconBetter width="25" height="25" />
+                          <p className="text-center text-sm mx-2 my-auto hover:underline">
+                            {t("translation.projects.viewCode")}
+                          </p>
+                        </a>
+                      </div>
+
+                      <div className="flex mx-2">
+                        <a
+                          href={card.previewLink}
+                          className="flex my-auto"
+                          target="_blank"
+                        >
+                          <LinkIcon
+                            width="35"
+                            height="35"
+                            viewBox="0 130 960 960"
+                            className="my-auto"
+                          />
+                          <p className="text-center text-sm mx-2 my-auto hover:underline">
+                            {t("translation.projects.livePreview")}
+                          </p>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           ))}
-
-          <div className="mx-5 my-5 md:my-0 flex flex-col">
-            <div className="h-[235px]">
-              <Image
-                src={"/images/locale.png"}
-                alt={""}
-                width={375}
-                height={260}
-                className="rounded-t-[30px] h-full"
-              />
-            </div>
-            <div className="max-w-[375px] lg:h-[307px] p-5 bg-[#363636] rounded-b-[30px]">
-              <h2 className=" text-3xl font-semibold leading-6 mb-3 text-center">
-                Locale Imóveis
-              </h2>
-              <p className="text-center mb-3 text-lg font-light leading-6">
-                {t("translation.projects.locale")}
-              </p>
-              <p className="text-center text-sm">
-                Stack: Next.js, Nestjs, Typescript, Tailwind CSS, MongoDB
-              </p>
-              <div
-                className={`${
-                  language === "en" ? "lg:mt-6 md:mt-12 mt-2" : "lg:mt-3.5"
-                }`}
-              >
-                <div className="flex justify-center">
-                  <div className="flex mx-2">
-                    <a
-                      href="https://github.com/Carlos-Teixeira-Jr/discover-coffee-stores2"
-                      className="flex"
-                      target="_blank"
-                    >
-                      <GithubIconBetter width="25" height="25" />
-                      <p className="text-center text-sm mx-2 my-auto hover:underline">
-                        {t("translation.projects.viewCode")}
-                      </p>
-                    </a>
-                  </div>
-
-                  <div className="flex mx-2">
-                    <a
-                      href="https://discover-coffee-stores2.vercel.app/"
-                      className="flex my-auto"
-                      target="_blank"
-                    >
-                      <LinkIcon
-                        width="35"
-                        height="35"
-                        viewBox="0 130 960 960"
-                        className="my-auto"
-                      />
-                      <p className="text-center text-sm mx-2 my-auto hover:underline">
-                        {t("translation.projects.livePreview")}
-                      </p>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mx-5 my-5 md:my-0 flex flex-col">
-            <div className="h-[235px]">
-              <Image
-                src={"/images/coffee-connoisseur.png"}
-                alt={""}
-                width={375}
-                height={260}
-                className="rounded-t-[30px] h-full"
-              />
-            </div>
-            <div className="max-w-[375px] lg:h-[307px] p-5 bg-[#363636] rounded-b-[30px]">
-              <h2 className=" text-3xl font-semibold leading-6 mb-3 text-center">
-                Coffee Connoisseur
-              </h2>
-              <p className="text-center mb-3 text-lg font-light leading-6">
-                {t("translation.projects.coffeeConnoisseur")}
-              </p>
-              <p className="text-center text-sm">
-                Stack: Next.js, Javascript, CSS, React
-              </p>
-              <div
-                className={`${
-                  language === "en" ? "lg:mt-6 md:mt-12 mt-2" : "lg:mt-3.5"
-                }`}
-              >
-                <div className="flex justify-center">
-                  <div className="flex mx-2">
-                    <a
-                      href="https://github.com/Carlos-Teixeira-Jr/discover-coffee-stores2"
-                      className="flex"
-                      target="_blank"
-                    >
-                      <GithubIconBetter width="25" height="25" />
-                      <p className="text-center text-sm mx-2 my-auto hover:underline">
-                        {t("translation.projects.viewCode")}
-                      </p>
-                    </a>
-                  </div>
-
-                  <div className="flex mx-2">
-                    <a
-                      href="https://discover-coffee-stores2.vercel.app/"
-                      className="flex my-auto"
-                      target="_blank"
-                    >
-                      <LinkIcon
-                        width="35"
-                        height="35"
-                        viewBox="0 130 960 960"
-                        className="my-auto"
-                      />
-                      <p className="text-center text-sm mx-2 my-auto hover:underline">
-                        {t("translation.projects.livePreview")}
-                      </p>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mx-5 my-5 md:my-0 flex flex-col justify-center items-center">
-            <div className="">
-              <Image
-                src={"/images/netflix-clone.png"}
-                alt={""}
-                width={375}
-                height={260}
-                className="rounded-t-[30px]"
-              />
-            </div>
-            <div className="max-w-[375px] lg:h-[307px] p-5 lg:mb-5 bg-[#363636] rounded-b-[30px]">
-              <h2 className=" text-3xl font-semibold leading-6 mb-3 text-center">
-                Netflix Clone
-              </h2>
-              <p className="text-center mb-3 text-lg font-light leading-6">
-                {t("translation.projects.netflixClone")}
-              </p>
-              <p className="text-center text-sm">
-                Stack: Next.js, Javascript, CSS, React
-              </p>
-              <div
-                className={`${
-                  language === "en" ? "mt-5 lg:mt-8" : "lg:mt-3 mt-3"
-                }`}
-              >
-                <div className="flex justify-center">
-                  <Link
-                    href={"https://github.com/Carlos-Teixeira-Jr/netflix-clone"}
-                    target="_blank"
-                    className="my-auto"
-                  >
-                    <div className="flex mx-2">
-                      <GithubIconBetter width="25" height="25" />
-                      <p className="text-center text-sm mx-2 my-auto hover:underline">
-                        {t("translation.projects.viewCode")}
-                      </p>
-                    </div>
-                  </Link>
-
-                  <Link
-                    href={"https://netflix-clone-nu-mocha.vercel.app/"}
-                    target="_blank"
-                  >
-                    <div className="flex mx-2">
-                      <LinkIcon
-                        width="35"
-                        height="35"
-                        viewBox="0 130 960 960"
-                        className="my-auto"
-                      />
-                      <p className="text-center text-sm mx-2 my-auto hover:underline">
-                        {t("translation.projects.livePreview")}
-                      </p>
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mx-5 flex flex-col mb-5">
-            <div className="h-[235px]">
-              <Image
-                src={"/images/robofriends.png"}
-                alt={""}
-                width={375}
-                height={260}
-                className="rounded-t-[30px] h-full"
-              />
-            </div>
-            <div className="max-w-[375px] h-fit p-5 bg-[#363636] rounded-b-[30px]">
-              <h2 className=" text-3xl font-semibold leading-6 mb-3 text-center">
-                Robofriends
-              </h2>
-              <p className="text-center mb-3 text-lg font-light leading-6">
-                {t("translation.projects.roboFriends")}
-              </p>
-              <p className="text-center text-sm">
-                Stack: Javascript, CSS, React
-              </p>
-              <div className="mt-5">
-                <div
-                  className={`flex justify-center ${
-                    language === "en"
-                      ? "lg:mt-[118px] md:mt-[120px] mt-[120px]"
-                      : "lg:mt-[133px] md:mt-[120px] mt-[110px]"
-                  }`}
-                >
-                  <div className="flex mx-2">
-                    <a
-                      href="https://github.com/Carlos-Teixeira-Jr/robofriends"
-                      className="flex"
-                      target="_blank"
-                    >
-                      <GithubIconBetter width="25" height="25" />
-                      <p className="text-center text-sm mx-2 my-auto hover:underline">
-                        {t("translation.projects.viewCode")}
-                      </p>
-                    </a>
-                  </div>
-
-                  <div className="flex mx-2">
-                    <a
-                      href="https://carlos-teixeira-jr.github.io/robofriends/"
-                      className="flex my-auto"
-                      target="_blank"
-                    >
-                      <LinkIcon
-                        width="35"
-                        height="35"
-                        viewBox="0 130 960 960"
-                        className="my-auto"
-                      />
-                      <p className="text-center text-sm mx-2 my-auto hover:underline">
-                        {t("translation.projects.livePreview")}
-                      </p>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mx-5 flex flex-col mb-5">
-            <div className="h-[235px]">
-              <Image
-                src={"/images/quotes-carroussel.png"}
-                alt={""}
-                width={375}
-                height={260}
-                className="rounded-t-[30px] h-full"
-              />
-            </div>
-            <div className="max-w-[375px] h-fit p-5 bg-[#363636] rounded-b-[30px]">
-              <h2 className=" text-3xl font-semibold leading-6 mb-3 text-center">
-                Quotes Carroussel
-              </h2>
-              <p className="text-center mb-3 text-lg font-light leading-6">
-                {t("translation.projects.quotesCarroussel")}
-              </p>
-              <p className="text-center text-sm">
-                Stack: Javascript, Next.js, tailwind.
-              </p>
-              <div className="mt-5 items-baseline">
-                {/* <div className="flex justify-center lg:mt-[55px] md:mt-[55px] mt-[55px]"> */}
-                <div
-                  className={`flex justify-center ${
-                    language === "en"
-                      ? "lg:mt-[55px] md:mt-[55px] mt-[55px]"
-                      : "lg:mt-[px] md:mt-[55px] mt-[40px]"
-                  }`}
-                >
-                  <div className="flex mx-2">
-                    <a
-                      href="https://github.com/Carlos-Teixeira-Jr/next-quote-carousel"
-                      className="flex"
-                      target="_blank"
-                    >
-                      <GithubIconBetter width="25" height="25" />
-                      <p className="text-center text-sm mx-2 my-auto hover:underline">
-                        {t("translation.projects.viewCode")}
-                      </p>
-                    </a>
-                  </div>
-
-                  <div className="flex mx-2">
-                    <a
-                      href="https://next-quote-carousel.vercel.app/"
-                      className="flex my-auto"
-                      target="_blank"
-                    >
-                      <LinkIcon
-                        width="35"
-                        height="35"
-                        viewBox="0 130 960 960"
-                        className="my-auto"
-                      />
-                      <p className="text-center text-sm mx-2 my-auto hover:underline">
-                        {t("translation.projects.livePreview")}
-                      </p>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mx-5 flex flex-col">
-            <div className="h-[235px]">
-              <Image
-                src={"/images/airbns.png"}
-                alt={""}
-                width={375}
-                height={260}
-                className="rounded-t-[30px] h-full"
-              />
-            </div>
-            <div className="max-w-[375px] h-fit p-5 bg-[#363636] rounded-b-[30px]">
-              <h2 className=" text-3xl font-semibold leading-6 mb-3 text-center">
-                AirBnb Clone
-              </h2>
-              <p className="text-center mb-3 text-lg font-light leading-6">
-                {t("translation.projects.airBnbClone")}
-              </p>
-              <p className="text-center text-sm">
-                Stack: Javascript, Tailwind, Next.js, React
-              </p>
-              <div className="mt-5 items-baseline">
-                <div
-                  className={`flex justify-center ${
-                    language === "en"
-                      ? "lg:mt-[55px] md:mt-[50px] mt-[55px]"
-                      : "lg:mt-[35px] md:mt-[50px] mt-[5px]"
-                  }`}
-                >
-                  <div className="flex mx-2">
-                    <a
-                      href="https://github.com/Carlos-Teixeira-Jr/airbnb-style-clone"
-                      className="flex"
-                      target="_blank"
-                    >
-                      <GithubIconBetter width="25" height="25" />
-                      <p className="text-center text-sm mx-2 my-auto hover:underline">
-                        {t("translation.projects.viewCode")}
-                      </p>
-                    </a>
-                  </div>
-
-                  <div className="flex mx-2">
-                    <a
-                      href="https://airbnb-style-clone.vercel.app/"
-                      className="flex my-auto"
-                      target="_blank"
-                    >
-                      <LinkIcon
-                        width="35"
-                        height="35"
-                        viewBox="0 130 960 960"
-                        className="my-auto"
-                      />
-                      <p className="text-center text-sm mx-2 my-auto hover:underline">
-                        {t("translation.projects.livePreview")}
-                      </p>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mx-5 flex flex-col mt-5 lg:mt-0">
-            <div className="h-[235px]">
-              <Image
-                src={"/images/pokedex.png"}
-                alt={""}
-                width={375}
-                height={260}
-                className="rounded-t-[30px] h-full"
-              />
-            </div>
-            <div className="max-w-[375px] h-fit p-5 bg-[#363636] rounded-b-[30px]">
-              <h2 className=" text-3xl font-semibold leading-6 mb-3 text-center">
-                Pokedéx
-              </h2>
-              <p className="text-center mb-3 text-lg font-light leading-6">
-                {t("translation.projects.pokedex")}
-              </p>
-              <p className="text-center text-sm">
-                Stack: Javascript, Vue.js, Bulma
-              </p>
-              <div className="mt-5 items-baseline">
-                {/* <div className="flex justify-center lg:mt-[102px] md:mt-[90px] mt-[75px]"> */}
-                <div
-                  className={`flex justify-center ${
-                    language === "en"
-                      ? "lg:mt-[102px] md:mt-[90px] mt-[100px]"
-                      : "lg:mt-[102px] md:mt-[90px] mt-[75px]"
-                  }`}
-                >
-                  <div className="flex mx-2">
-                    <a
-                      href="https://github.com/Carlos-Teixeira-Jr/pokedex"
-                      className="flex"
-                      target="_blank"
-                    >
-                      <GithubIconBetter width="25" height="25" />
-                      <p className="text-center text-sm mx-2 my-auto hover:underline">
-                        {t("translation.projects.viewCode")}
-                      </p>
-                    </a>
-                  </div>
-
-                  <div className="flex mx-2">
-                    <a
-                      href="https://pokedex-eight-lemon.vercel.app/"
-                      className="flex my-auto"
-                      target="_blank"
-                    >
-                      <LinkIcon
-                        width="35"
-                        height="35"
-                        viewBox="0 130 960 960"
-                        className="my-auto"
-                      />
-                      <p className="text-center text-sm mx-2 my-auto hover:underline">
-                        {t("translation.projects.livePreview")}
-                      </p>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </Element>
     </div>

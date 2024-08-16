@@ -31,7 +31,8 @@
       "quotesCarroussel": "Aplicação simples e rudimentar para exercitar as funcionalidades básicas de manipulação do DOM usando vanilla javascript. Este é meu primeiro projeto pessoal em desenvolvimento web.",
       "airBnbClone": "Um clone das primeiras páginas do website do AirBnb consumindo APIs de serviços de geolocalização e mapas interativos para exercitar funcionalidades do Next.js e do framework de folhas de estilo Tailwind.",
       "pokedex": "Aplicação simples para exercitar o uso de APIs e funcionalidades básicas de Vue.js e do framwork de folhas de estilo Bulma.",
-      "fasteng": "Aplicação profissional para automatização de cálculos, ensaios e dosagens para processos de engenharia de solos e pavimentos. Nesta aplicação o maior desafio é reproduzir cálculos avançados de engenharia afim de facilitar esse trabalho."
+      "fasteng": "Aplicação profissional para automatização de cálculos, ensaios e dosagens para processos de engenharia de solos e pavimentos. Nesta aplicação o maior desafio é reproduzir cálculos avançados de engenharia afim de facilitar esse trabalho.",
+      "underappz": "Aplicação simples em fase inicial de desenvolvimento com o objetivo de ser uma rede social baseada no Instagram apenas para produtores de conteúdo artístico underground. A MVP tem como objetivo permitir oupload de material de áudio, vídeo e imagem e também oferecer um e-commerce aos artístas."
     },
     "resume": {
       "title": "DESENVOLVEDOR FULLSTACK",
