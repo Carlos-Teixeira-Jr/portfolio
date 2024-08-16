@@ -1,22 +1,16 @@
 import Image from "next/image"
-import { useState } from "react";
 import { useTranslation } from "react-i18next"
 import { Element } from "react-scroll"
 
-export interface IGreeting {
-  selectedLanguage: string;
-}
 
-const Greetings: React.FC<IGreeting> = ({selectedLanguage}) => {
+const Greetings: React.FC = () => {
 
-  const [language, setLanguage] = useState(selectedLanguage);
   const { t } = useTranslation();
 
   return (
     <Element name="about">
-      <div className="flex justify-evenly lg:my-[90px] my-14">
+      <div className="flex justify-evenly my-14">
         <div>
-          {/* <p className="lg:text-6xl md:text-4xl font-extrabold leading-2">Hi, 👋</p> */}
           <p className="lg:text-6xl md:text-4xl font-extrabold leading-2">
             {t('translation.greeting.greetingHi')}
           </p>
