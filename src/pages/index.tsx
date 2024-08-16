@@ -39,9 +39,7 @@ export default function Home() {
         ): (
           <main className='max-w-[1536px] mx-auto'>
 
-            <Greetings 
-              selectedLanguage={language}
-            />
+            <Greetings />
 
             <TechStack
               selectedLanguage={language}
