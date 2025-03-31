@@ -1,14 +1,11 @@
 import Head from 'next/head'
-import { Inter } from 'next/font/google'
 import Navbar from '@/components/navbar'
 import Greetings from '@/components/greeting'
 import TechStack from '@/components/techStack'
 import Projects from '@/components/projects'
 import Footer from '@/components/footer'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Curriculum from '@/components/curriculum'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
 
