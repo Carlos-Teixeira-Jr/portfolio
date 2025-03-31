@@ -27,7 +27,7 @@ const Projects: React.FC<IProjects> = ({ selectedLanguage }) => {
       stack: "Next.js, Nestjs, MongoDB, MaterialUI",
       githubLink: "https://github.com/Fastengapp",
       previewLink: "https://smartdoser.fastengapp.com.br/entrar",
-      alt: "Preview project card",
+      alt: "Preview fasteng project card",
     },
     {
       key: "locale",
@@ -37,7 +37,17 @@ const Projects: React.FC<IProjects> = ({ selectedLanguage }) => {
       stack: "Next.js, Nestjs, MongoDB, Tailwind CSS",
       githubLink: "https://github.com/Carlos-Teixeira-Jr/locale-backend-cln",
       previewLink: "https://www.localeimoveis.com",
-      alt: "Preview project card",
+      alt: "Preview locale imóveis project card",
+    },
+    {
+      key: "nullbank",
+      src: "/images/nullbank.png",
+      title: "Null Bank",
+      resume: t("translation.projects.nullbank"),
+      stack: "HTML, CSS, Javascript",
+      githubLink: "https://github.com/Carlos-Teixeira-Jr/null-bank",
+      previewLink: "https://null-bank.vercel.app/",
+      alt: "Preview nullbank project card",
     },
     {
       key: "UnderAppz",
@@ -47,7 +57,7 @@ const Projects: React.FC<IProjects> = ({ selectedLanguage }) => {
       stack: "Next.js, Nestjs, MongoDB, Tailwind CSS",
       githubLink: "https://github.com/Carlos-Teixeira-Jr/underappz-backend",
       previewLink: "https://underappz.vercel.app/",
-      alt: "Preview project card",
+      alt: "Preview underappz project card",
     },
     {
       key: "Coffee Connoisseur",
@@ -58,7 +68,7 @@ const Projects: React.FC<IProjects> = ({ selectedLanguage }) => {
       githubLink:
         "https://github.com/Carlos-Teixeira-Jr/discover-coffee-stores2",
       previewLink: "https://discover-coffee-stores2.vercel.app/",
-      alt: "Preview project card",
+      alt: "Preview coffee conoisseur project card",
     },
     {
       key: "Netflix Clone",
@@ -68,7 +78,7 @@ const Projects: React.FC<IProjects> = ({ selectedLanguage }) => {
       stack: "Next.js, Javascript, CSS, React",
       githubLink: "https://github.com/Carlos-Teixeira-Jr/netflix-clone",
       previewLink: "https://netflix-clone-nu-mocha.vercel.app/",
-      alt: "Preview project card",
+      alt: "Preview nextflix clone project card",
     },
     {
       key: "AirBnb Clone",
@@ -78,7 +88,7 @@ const Projects: React.FC<IProjects> = ({ selectedLanguage }) => {
       stack: "Javascript, Tailwind, Next.js, React",
       githubLink: "https://github.com/Carlos-Teixeira-Jr/airbnb-style-clone",
       previewLink: "https://airbnb-style-clone.vercel.app/",
-      alt: "Preview project card",
+      alt: "Preview air bnb clone project card",
     },
     {
       key: "Quotes Carroussel",
@@ -88,7 +98,7 @@ const Projects: React.FC<IProjects> = ({ selectedLanguage }) => {
       stack: "Javascript, Next.js, tailwind CSS",
       githubLink: "https://github.com/Carlos-Teixeira-Jr/next-quote-carousel",
       previewLink: "https://next-quote-carousel.vercel.app/",
-      alt: "Preview project card",
+      alt: "Preview quotes carroussel project card",
     },
     {
       key: "Pokedéx",
@@ -98,7 +108,7 @@ const Projects: React.FC<IProjects> = ({ selectedLanguage }) => {
       stack: "Javascript, Vue.js, Bulma",
       githubLink: "https://github.com/Carlos-Teixeira-Jr/pokedex",
       previewLink: "https://pokedex-eight-lemon.vercel.app/",
-      alt: "Preview project card",
+      alt: "Preview pokedex project card",
     },
     {
       key: "Robofriends",
@@ -108,7 +118,7 @@ const Projects: React.FC<IProjects> = ({ selectedLanguage }) => {
       stack: "Javascript, CSS, React",
       githubLink: "https://github.com/Carlos-Teixeira-Jr/robofriends",
       previewLink: "https://carlos-teixeira-jr.github.io/robofriends/",
-      alt: "Preview project card",
+      alt: "Preview robofriends project card",
     },
   ];
 

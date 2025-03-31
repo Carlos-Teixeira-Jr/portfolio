@@ -57,16 +57,16 @@ const Navbar = ({selectedLanguage, handleShowCurriculum}: INavbar) => {
           <h1 className="mx-5 font-stylish text-4xl font-bold text-transparent bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] bg-clip-text">{"{Carlos | Teixeira}"}</h1>
           <div className="flex justify-evenly lg:w-2/6 sm:my-3 lg:my-auto">
             <Link to="tech-stack" smooth={true} duration={500}>
-              <button className="text-[#CCCCCC] mx-6 text-lg mb-5">{t("translation.navbar.techstack")}</button>
+              <button className="text-[#CCCCCC] mx-6 text-lg">{t("translation.navbar.techstack")}</button>
             </Link>
             <Link to="projects" smooth={true} duration={500}>
-              <button className="text-[#CCCCCC] mx-6 text-lg mb-5" >{t("translation.navbar.projects")}</button>
+              <button className="text-[#CCCCCC] mx-6 text-lg" >{t("translation.navbar.projects")}</button>
             </Link>
             <Link to="contact" smooth={true} duration={500}>
-              <button className="text-[#CCCCCC] mx-6 text-lg mb-5" >{t("translation.navbar.contacts")}</button>
+              <button className="text-[#CCCCCC] mx-6 text-lg" >{t("translation.navbar.contacts")}</button>
             </Link>
             <button 
-              className="text-[#CCCCCC] mx-6 text-lg mb-5"
+              className="text-[#CCCCCC] mx-6 text-lg"
               onClick={() => setShowCurriculum(!showCurriculum)}
             >
               {t("translation.navbar.curriculum")}
@@ -74,20 +74,20 @@ const Navbar = ({selectedLanguage, handleShowCurriculum}: INavbar) => {
           </div>
           {!isTablet && (
             <>
-              <div className="flex">
+              <div className="flex items-center">
                 <div className="text-[#CCCCCC] mx-5">
                   <a href="https://github.com/Carlos-Teixeira-Jr" target="_blank">
-                    <GithubIcon />
+                    <GithubIcon width="28" height="28"/>
                   </a>
                 </div>
                 <div className="text-[#CCCCCC] mx-5">
                   <a href="mailto:teixeirahist1988@gmail.com" target="_blank">
-                    <MessageIcon/>
+                    <MessageIcon width="28" height="28"/>
                   </a>
                 </div>
                 <div className="text-[#CCCCCC] mx-5">
                   <a href="https://www.linkedin.com/in/carlos-teixeira-000b7b1a0/" target="_blank">
-                    <LinkedinIcon />
+                    <LinkedinIcon width="28" height="28"/>
                   </a>
                 </div>
               </div>
