@@ -29,7 +29,9 @@
       "quotesCarroussel": "Simple and basic application to exercise the primary functionalities of DOM manipulation using vanilla Javascript. This is my first personal project in web development.",
       "airBnbClone": "A clone of first pages of AirBnb website consuming API services for geolocalization and interactive maps to exercise functionalities of Next.js and Tailwind stylesheet framework.",
       "pokedex": "Simple application to exercise the use of APIs and basic functionalities of Vue.js and Bulma stylesheet framework.",
-      "fasteng": "Professional application for automating calculations, tests and dosages for soil and pavement engineering processes. In this application the biggest challenge is to reproduce advanced engineering calculations to facilitate this work."
+      "fasteng": "Professional application for automating calculations, tests and dosages for soil and pavement engineering processes. In this application the biggest challenge is to reproduce advanced engineering calculations to facilitate this work.",
+      "nullbank": "Simple landing page to exercise concepts of HTML and CSS such as semantics, responsiveness and flexbox/grid.",
+      "plantpeace": "Simple application with registration and authentication of users via Clerk and persistence of data in a fictional database using json-server."
     },
     "resume": {
       "title": "FULLSTACK DEVELOPER",

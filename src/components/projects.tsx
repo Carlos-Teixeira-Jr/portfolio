@@ -10,6 +10,7 @@ export interface IProjects {
   selectedLanguage: string;
 }
 
+
 const Projects: React.FC<IProjects> = ({ selectedLanguage }) => {
   const [language, setLanguage] = useState(selectedLanguage);
   const { t } = useTranslation();
@@ -38,6 +39,16 @@ const Projects: React.FC<IProjects> = ({ selectedLanguage }) => {
       githubLink: "https://github.com/Carlos-Teixeira-Jr/locale-backend-cln",
       previewLink: "https://www.localeimoveis.com",
       alt: "Preview locale imóveis project card",
+    },
+    {
+      key: "Plant Peace",
+      src: "/images/plantpeace.png",
+      title: "Plant Peace",
+      resume: t("translation.projects.plantpeace"),
+      stack: "React, Json-Server, Tailwind CSS, Clerk",
+      githubLink: "https://github.com/Carlos-Teixeira-Jr/ARD24_D02_UX_MEN",
+      previewLink: "https://ard-24-d02-ux-fbszq8ymf-carlosteixeirajrs-projects.vercel.app/",
+      alt: "Preview plant peace project card",
     },
     {
       key: "nullbank",

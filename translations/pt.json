@@ -33,7 +33,8 @@
       "pokedex": "Aplicação simples para exercitar o uso de APIs e funcionalidades básicas de Vue.js e do framwork de folhas de estilo Bulma.",
       "fasteng": "Aplicação profissional para automatização de cálculos, ensaios e dosagens para processos de engenharia de solos e pavimentos. Nesta aplicação o maior desafio é reproduzir cálculos avançados de engenharia afim de facilitar esse trabalho.",
       "underappz": "Aplicação simples em fase inicial de desenvolvimento com o objetivo de ser uma rede social baseada no Instagram apenas para produtores de conteúdo artístico underground. A MVP tem como objetivo permitir oupload de material de áudio, vídeo e imagem e também oferecer um e-commerce aos artístas.",
-      "nullbank": "Landing page simples para exercitar conceitos de HTML e CSS como semântica, responsividade e flexbox/grid."
+      "nullbank": "Landing page simples para exercitar conceitos de HTML e CSS como semântica, responsividade e flexbox/grid.",
+      "plantpeace": "Aplicação simples com cadastro e autenticação de usuários via Clerk e persistência de dados em banco de dados ficctício usando json-server."
     },
     "resume": {
       "title": "DESENVOLVEDOR FULLSTACK",
