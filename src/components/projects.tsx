@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import GithubIconBetter from "./icons/githubIconReal";
-import Link from "next/link";
 import LinkIcon from "./icons/linkIcons";
 import { Element } from "react-scroll";
 import { useTranslation } from "react-i18next";
@@ -9,7 +8,6 @@ import { useTranslation } from "react-i18next";
 export interface IProjects {
   selectedLanguage: string;
 }
-
 
 const Projects: React.FC<IProjects> = ({ selectedLanguage }) => {
   const [language, setLanguage] = useState(selectedLanguage);
@@ -26,19 +24,19 @@ const Projects: React.FC<IProjects> = ({ selectedLanguage }) => {
       title: "Fasteng",
       resume: t("translation.projects.fasteng"),
       stack: "Next.js, Nestjs, MongoDB, MaterialUI",
-      githubLink: "https://github.com/Fastengapp",
+      githubLink: "",
       previewLink: "https://smartdoser.fastengapp.com.br/entrar",
       alt: "Preview fasteng project card",
     },
     {
-      key: "locale",
-      src: "/images/locale.png",
-      title: "Locale Imóveis",
-      resume: t("translation.projects.locale"),
-      stack: "Next.js, Nestjs, MongoDB, Tailwind CSS",
-      githubLink: "https://github.com/Carlos-Teixeira-Jr/locale-backend-cln",
-      previewLink: "https://www.localeimoveis.com",
-      alt: "Preview locale imóveis project card",
+      key: "dripculture",
+      src: "/images/dripculture.png",
+      title: "DripCulture",
+      resume: t("translation.projects.dripculture"),
+      stack: "React, Json-Server, Tailwind CSS, Clerk",
+      githubLink: "https://github.com/Carlos-Teixeira-Jr/drip-culture",
+      previewLink: "https://drip-culture.vercel.app/",
+      alt: "Preview DripCulture project card",
     },
     {
       key: "Plant Peace",
@@ -47,8 +45,19 @@ const Projects: React.FC<IProjects> = ({ selectedLanguage }) => {
       resume: t("translation.projects.plantpeace"),
       stack: "React, Json-Server, Tailwind CSS, Clerk",
       githubLink: "https://github.com/Carlos-Teixeira-Jr/ARD24_D02_UX_MEN",
-      previewLink: "https://ard-24-d02-ux-fbszq8ymf-carlosteixeirajrs-projects.vercel.app/",
+      previewLink:
+        "https://ard-24-d02-ux-fbszq8ymf-carlosteixeirajrs-projects.vercel.app/",
       alt: "Preview plant peace project card",
+    },
+    {
+      key: "locale",
+      src: "/images/locale.png",
+      title: "Locale Imóveis",
+      resume: t("translation.projects.locale"),
+      stack: "Next.js, Nestjs, MongoDB, Tailwind CSS",
+      githubLink: "",
+      previewLink: "https://www.localeimoveis.com",
+      alt: "Preview locale imóveis project card",
     },
     {
       key: "nullbank",
@@ -145,7 +154,7 @@ const Projects: React.FC<IProjects> = ({ selectedLanguage }) => {
 
         <div className="md:flex md:flex-wrap lg:flex-wrap justify-center gap-5">
           {cards.map((card) => (
-            <div className="mx-5 my-5 md:my-0 flex flex-col" key={card.key}>
+            <div className="mx-5 my-5 md:my-0 flex flex-col transition-all hover:scale-105 duration-100 ease-in-out" key={card.key}>
               <div className="h-fit">
                 <Image
                   src={card.src}
@@ -173,18 +182,20 @@ const Projects: React.FC<IProjects> = ({ selectedLanguage }) => {
                     }`}
                   >
                     <div className="flex justify-center">
-                      <div className="flex mx-2">
-                        <a
-                          href={card.githubLink}
-                          className="flex"
-                          target="_blank"
-                        >
-                          <GithubIconBetter width="25" height="25" />
-                          <p className="text-center text-sm mx-2 my-auto hover:underline">
-                            {t("translation.projects.viewCode")}
-                          </p>
-                        </a>
-                      </div>
+                      {card.githubLink !== "" && (
+                        <div className="flex mx-2">
+                          <a
+                            href={card.githubLink}
+                            className="flex"
+                            target="_blank"
+                          >
+                            <GithubIconBetter width="25" height="25" />
+                            <p className="text-center text-sm mx-2 my-auto hover:underline">
+                              {t("translation.projects.viewCode")}
+                            </p>
+                          </a>
+                        </div>
+                      )}
 
                       <div className="flex mx-2">
                         <a
