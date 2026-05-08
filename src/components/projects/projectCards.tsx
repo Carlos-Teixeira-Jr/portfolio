@@ -37,7 +37,12 @@ const ProjectCard = ({ card, language, handleRedirect, t }: ProjectCardProps) =>
             <div className="flex justify-center">
               {card.githubLink !== '' && (
                 <div className="flex mx-2">
-                  <a href={card.githubLink} className="flex" target="_blank">
+                  <a
+                    href={card.githubLink}
+                    className="flex"
+                    target="_blank"
+                    onClick={(e) => e.stopPropagation()}
+                  >
                     <GithubIconBetter width="25" height="25" />
                     <p className="text-center text-sm mx-2 my-auto hover:underline">
                       {t('translation.projects.viewCode')}
@@ -47,7 +52,12 @@ const ProjectCard = ({ card, language, handleRedirect, t }: ProjectCardProps) =>
               )}
 
               <div className="flex mx-2">
-                <a href={card.previewLink} className="flex my-auto" target="_blank">
+                <a
+                  href={card.previewLink}
+                  className="flex my-auto"
+                  target="_blank"
+                  onClick={(e) => e.stopPropagation()}
+                >
                   <LinkIcon width="35" height="35" viewBox="0 130 960 960" className="my-auto" />
                   <p className="text-center text-sm mx-2 my-auto hover:underline">
                     {t('translation.projects.livePreview')}

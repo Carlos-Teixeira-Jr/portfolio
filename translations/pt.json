@@ -28,7 +28,7 @@
       "livePreview": "Visualizar",
       "netflixClone": "Aplicação simples de clonagem de algumas funcionalidades básicas do Netflix. Os videos são requisitados à API do Youtube. Inclui um sistema de login sem senha e integração com um banco de dados em nuvem que permite aos usuários favoritar vídeos.",
       "roboFriends": "Aplicação simples para exercitar as funcionalidades dos React Hooks.",
-      "quotesCarroussel": "Aplicação simples e rudimentar para exercitar as funcionalidades básicas de manipulação do DOM usando vanilla javascript. Este é meu primeiro projeto pessoal em desenvolvimento web.",
+      "quotesCarroussel": "Aplicação web que gera citações aleatórias de pensadores famosos consumindo APIs externas. O projeto utiliza um backend em Express para buscar citações em inglês, traduzi-las para português e recuperar imagens dos autores antes de exibir os dados em uma interface construída com Next.js e Tailwind CSS.",
       "airBnbClone": "Um clone das primeiras páginas do website do AirBnb consumindo APIs de serviços de geolocalização e mapas interativos para exercitar funcionalidades do Next.js e do framework de folhas de estilo Tailwind.",
       "pokedex": "Aplicação simples para exercitar o uso de APIs e funcionalidades básicas de Vue.js e do framwork de folhas de estilo Bulma.",
       "fasteng": "Aplicação profissional para automatização de cálculos, ensaios e dosagens para processos de engenharia de solos e pavimentos. Nesta aplicação o maior desafio é reproduzir cálculos avançados de engenharia afim de facilitar esse trabalho.",
