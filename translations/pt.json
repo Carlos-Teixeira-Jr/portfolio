@@ -30,7 +30,7 @@
       "roboFriends": "Aplicação simples para exercitar as funcionalidades dos React Hooks.",
       "quotesCarroussel": "Aplicação web que gera citações aleatórias de pensadores famosos consumindo APIs externas. O projeto utiliza um backend em Express para buscar citações em inglês, traduzi-las para português e recuperar imagens dos autores antes de exibir os dados em uma interface construída com Next.js e Tailwind CSS.",
       "airBnbClone": "Um clone das primeiras páginas do website do AirBnb consumindo APIs de serviços de geolocalização e mapas interativos para exercitar funcionalidades do Next.js e do framework de folhas de estilo Tailwind.",
-      "pokedex": "Aplicação simples para exercitar o uso de APIs e funcionalidades básicas de Vue.js e do framwork de folhas de estilo Bulma.",
+      "pokedex": "Aplicação frontend desenvolvida com Vue.js, TypeScript e Bulma focada em consumo de APIs REST, componentização e experiência do usuário, com busca em tempo real, filtros e página detalhada de Pokémon.",
       "fasteng": "Aplicação profissional para automatização de cálculos, ensaios e dosagens para processos de engenharia de solos e pavimentos. Nesta aplicação o maior desafio é reproduzir cálculos avançados de engenharia afim de facilitar esse trabalho.",
       "underappz": "Aplicação simples em fase inicial de desenvolvimento com o objetivo de ser uma rede social baseada no Instagram apenas para produtores de conteúdo artístico underground. A MVP tem como objetivo permitir oupload de material de áudio, vídeo e imagem e também oferecer um e-commerce aos artístas.",
       "nullbank": "Landing page simples para exercitar conceitos de HTML e CSS como semântica, responsividade e flexbox/grid.",
